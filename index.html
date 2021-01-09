@@ -16,33 +16,18 @@
 		<div class="wthree-row w3-agile"> 
 			<div id="videoContainer">
 			
-		<iframe src="https://player.twitch.tv/?channel=ocumareerestutv&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-			 <div id="twitch-embed"></div>
+<!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
 
-   		 <div id="twitch-embed"></div>
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-   <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!--
-      Create a Twitch.Embed object that will render
-      within the "twitch-embed" root element.
-    -->
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
-        width: 900,
-        height: 490,
-        channel: "ocumareerestutv",
-        layout: "video",
-        autoplay: true,
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        parent: ["embed.example.com", "othersite.example.com"]
-      });
-
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+    channel: "ocumareerestutv"
+  });
+</script>
     <!--
 <script src="js/jquery-3.1.0.min.js"></script>
 			<script>
